@@ -63,7 +63,9 @@ Alertas observadas:
 - [docs/01-lab-setup.md](docs/01-lab-setup.md): creacion del laboratorio y red segura.
 - [docs/02-wazuh-agent-install.md](docs/02-wazuh-agent-install.md): instalacion del agente Linux.
 - [docs/03-authentication-detection.md](docs/03-authentication-detection.md): primer ejercicio de deteccion.
+- [docs/04-file-integrity-monitoring.md](docs/04-file-integrity-monitoring.md): deteccion de archivo agregado con FIM.
 - [incident-reports/IR-001-failed-sudo.md](incident-reports/IR-001-failed-sudo.md): mini reporte estilo SOC.
+- [incident-reports/IR-002-file-added-fim.md](incident-reports/IR-002-file-added-fim.md): reporte SOC de cambio de archivo.
 - [scripts/](scripts/): scripts auxiliares para ejecutar ejercicios con menos comandos manuales.
 - [docs/github-linkedin-guide.md](docs/github-linkedin-guide.md): como presentar este proyecto en GitHub y LinkedIn.
 
