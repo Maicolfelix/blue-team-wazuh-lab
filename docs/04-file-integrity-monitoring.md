@@ -31,7 +31,7 @@ El script realiza estas acciones:
 - Reinicia el servicio `wazuh-agent`.
 - Genera un archivo de prueba.
 
-## Alerta observada
+## Alertas observadas
 
 | Campo | Valor |
 | --- | --- |
@@ -42,13 +42,26 @@ El script realiza estas acciones:
 | rule.id | 554 |
 | rule.level | 5 |
 
+Segundo evento observado:
+
+| Campo | Valor |
+| --- | --- |
+| agent.name | linux-agent-01 |
+| syscheck.path | /opt/blue-team-lab-fim/test-file.txt |
+| syscheck.event | deleted |
+| rule.description | File deleted. |
+| rule.id | 553 |
+| rule.level | 7 |
+
 ## Evidencia
 
 ![Wazuh FIM - file added](../screenshots/wazuh-fim-file-added.png)
 
+![Wazuh FIM - file deleted](../screenshots/wazuh-fim-file-deleted.png)
+
 ## Interpretacion
 
-Wazuh detecto que se agrego un nuevo archivo en una ruta monitoreada por FIM. En un ambiente real, este tipo de alerta puede ser relevante si ocurre en rutas sensibles como configuraciones de servicios, binarios del sistema, llaves SSH o archivos de usuarios privilegiados.
+Wazuh detecto que se agrego y posteriormente se elimino un archivo en una ruta monitoreada por FIM. En un ambiente real, este tipo de alerta puede ser relevante si ocurre en rutas sensibles como configuraciones de servicios, binarios del sistema, llaves SSH o archivos de usuarios privilegiados.
 
 ## Preguntas de triage
 
@@ -62,4 +75,3 @@ Wazuh detecto que se agrego un nuevo archivo en una ruta monitoreada por FIM. En
 ## Conclusion
 
 La prueba confirma que el agente Linux envia eventos de integridad de archivos al Wazuh Manager y que el dashboard permite investigar cambios desde la vista File Integrity Monitoring.
-

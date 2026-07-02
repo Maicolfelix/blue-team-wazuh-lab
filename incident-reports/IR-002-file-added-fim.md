@@ -12,9 +12,9 @@ Se detecto la creacion de un archivo nuevo en una ruta monitoreada por File Inte
 | Tipo | File Integrity Monitoring |
 | Endpoint | linux-agent-01 |
 | Ruta | /opt/blue-team-lab-fim/test-file.txt |
-| Evento | added |
-| Regla | 554 |
-| Severidad observada | Nivel 5 |
+| Eventos | added, deleted |
+| Reglas | 554, 553 |
+| Severidad observada | Nivel 5 y Nivel 7 |
 | Estado | Cerrado como prueba controlada |
 
 ## Linea de tiempo
@@ -26,17 +26,19 @@ Se detecto la creacion de un archivo nuevo en una ruta monitoreada por File Inte
 | T2 | Se crea `test-file.txt` |
 | T3 | Wazuh Agent detecta el cambio |
 | T4 | Wazuh Dashboard muestra la alerta `File added to the system` |
+| T5 | Se elimina el archivo de prueba |
+| T6 | Wazuh Dashboard muestra la alerta `File deleted` |
 
 ## Analisis
 
-La alerta corresponde a la adicion de un archivo en una ruta monitoreada. En este laboratorio la actividad es esperada. En produccion, un archivo nuevo en una ruta critica podria indicar persistencia, modificacion no autorizada, despliegue indebido o preparacion de actividad maliciosa.
+Las alertas corresponden a la adicion y eliminacion de un archivo en una ruta monitoreada. En este laboratorio la actividad es esperada. En produccion, un archivo nuevo o eliminado en una ruta critica podria indicar persistencia, modificacion no autorizada, despliegue indebido, limpieza de rastros o preparacion de actividad maliciosa.
 
 ## Evidencia
 
 - Agente afectado: `linux-agent-01`
 - Ruta observada: `/opt/blue-team-lab-fim/test-file.txt`
 - Modulo: File Integrity Monitoring
-- Regla activada: `554`
+- Reglas activadas: `554`, `553`
 
 ## Contencion
 
@@ -52,4 +54,3 @@ No se requirio contencion porque fue una prueba controlada dentro de un laborato
 ## Resultado
 
 Caso cerrado como ejercicio exitoso de validacion de FIM.
-
