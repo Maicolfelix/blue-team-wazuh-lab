@@ -64,6 +64,7 @@ Alertas observadas:
 - [docs/02-wazuh-agent-install.md](docs/02-wazuh-agent-install.md): instalacion del agente Linux.
 - [docs/03-authentication-detection.md](docs/03-authentication-detection.md): primer ejercicio de deteccion.
 - [incident-reports/IR-001-failed-sudo.md](incident-reports/IR-001-failed-sudo.md): mini reporte estilo SOC.
+- [scripts/](scripts/): scripts auxiliares para ejecutar ejercicios con menos comandos manuales.
 - [docs/github-linkedin-guide.md](docs/github-linkedin-guide.md): como presentar este proyecto en GitHub y LinkedIn.
 
 ## Resultado
